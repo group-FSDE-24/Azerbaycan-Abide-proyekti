@@ -1,0 +1,41 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+}
+
+ul{
+  list-style-type: none;
+}
+main{
+  margin-top: 30px;
+}
+
+.monuments-list{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+}
+
+.monuments-list li{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  border: 3px solid black;
+  border-radius: 30px;
+  padding: 20px;
+}
+
+.monuments-list li img{
+  width: 300px;
+  height: 300px;
+  background-image: url('https://media.istockphoto.com/id/1222357475/vector/image-preview-icon-picture-placeholder-for-website-or-ui-ux-design-vector-illustration.jpg?s=612x612&w=0&k=20&c=KuCo-dRBYV7nz2gbk4J9w1WtTAgpTdznHu55W9FjimE=');
+  background-size: contain;
+}
