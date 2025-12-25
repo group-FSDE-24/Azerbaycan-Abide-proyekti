@@ -1,4 +1,4 @@
-const monuments = [
+let monuments = [
   {
     "id": 1,
     "name": "Qız Qalası",

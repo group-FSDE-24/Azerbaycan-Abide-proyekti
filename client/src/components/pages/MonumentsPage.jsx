@@ -12,11 +12,21 @@ function MonumentsPage() {
               dispatch(monumentsFetch())
     },[])
 
+    const loading = useSelector((state) => state.monumentsState.loading)
+    const error = useSelector((state) => state.monumentsState.error)
+
     const monuments = useSelector((state) => state.monumentsState.monuments)
     const searchValue = useSelector((state) => state.monumentsState.searchValue)
-
     const filtered = monuments.filter((item) => item.name.toLowerCase().startsWith(searchValue.toLowerCase()))
-    
+
+    if(loading){
+       return <h1>LOADING...</h1>
+    }
+
+    if(error){
+        return <h1>ERROR</h1>
+    }
+
     return(
         <div>
             <header>

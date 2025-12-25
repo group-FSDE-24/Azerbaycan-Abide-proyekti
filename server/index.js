@@ -11,7 +11,18 @@ app.use(bodyParser.json());
 /* =========================
    30 Azərbaycan abidəsi
 ========================= */
-const monuments = require("./monuments");
+let monuments = require("./monuments");
+
+// for (let index = 0; index < 10000; index++) {
+//   monuments.push({
+//     "id": ++monuments.at(-1).id,
+//     "name": "Şirvanşahlar Sarayı",
+//     "year": "XV əsr",
+//     "description": "UNESCO Ümumdünya irsi.",
+//     "city": "Bakı",
+//     "image": "https://portal.azertag.az/sites/default/files/shirvan5.JPG"
+//   })
+// }
 
 /* =========================
    ROUTES
@@ -71,6 +82,7 @@ app.put("/api/monuments/:id", (req, res) => {
 
 /* ❌ Abidə sil */
 app.delete("/api/monuments/:id", (req, res) => {
+  console.log(req.params.id)
   monuments = monuments.filter(m => m.id !== Number(req.params.id));
   res.json({ message: "Abidə silindi" });
 });

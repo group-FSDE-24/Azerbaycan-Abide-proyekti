@@ -7,6 +7,7 @@ import MonumentsPage from './components/pages/MonumentsPage.jsx'
 import AdminPage from './components/pages/AdminPage.jsx'
 import { store } from './store/store.js'
 import { Provider } from 'react-redux'
+import MonumentItemPage from './components/pages/MonumentItemPage.jsx'
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
       {
         element: <AdminPage />,
         path: '/admin'
+      },
+      {
+        element: <MonumentItemPage />,
+        path: '/monument'
       }
     ]
   }
